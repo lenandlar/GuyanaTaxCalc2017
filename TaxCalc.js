@@ -13,6 +13,7 @@ function doMTax(){
 	if (isNaN(gross)){
 		alert("incorrect value entered for gross");
 		document.getElementById("f1").focus();
+		document.tCalc.tax1.value = 0;
 	}
 	else
 	if (gross <= 60000){
@@ -27,7 +28,7 @@ function doMTax(){
 	 tax = ((tho2 - 120000)*0.4) + tho1a;
 	}
 
-	document.tCalc.tax1.value = tax; // display data to form element
+	document.tCalc.tax1.value = tax; // display tax data to form element
 
 }
 
@@ -54,7 +55,7 @@ function doYTax(){
 	 tax = ((tho2 - 1440000)*0.4) + (tho1a * 12);
 	}
 
-	document.tCalc1.tax1.value = tax; // display data to form element
+	document.tCalc1.tax1.value = tax; // display tax data to form element
 
 }
 
