@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> Guyana New Income Tax Calculator (2017 Onwards) </title>
+<script type="text/javascript" src="TaxCalc.js"></script>
+</head>
+
+<body>
+
+<h1> Guyana Income Tax Calculation</h1>
+<h2> Monthly </h2>
+
+
+<form name="tCalc" id="f">
+<fieldset>
+    <legend>Monthly Income Tax Calculator:</legend>
+
+<label> Gross Income/Month ($): </label>
+<input type="text" name="val1" id="f1" />
+<br />
+<br />
+<label> Tax Payable/Month ($): </label>
+<input type="text" name="tax1" id="f3"/> <br />
+<br />
+<input type ="button" value = "Calulate Month Tax" onClick="doMTax()"/>
+<br />
+<br />
+
+</fieldset>
+</form>
+
+
+<form name="tCalc1" id="f">
+<h2> Yearly </h2>
+<fieldset>
+    <legend>Yearly Income Tax Calculator:</legend>
+
+<label> Gross Income/Year ($): </label>
+<input type="text" name="val1" id="f1" />
+<br /> 
+
+<br />
+<label> Tax Payable/Year ($): </label>
+<input type="text" name="tax1" id="f3"/> <br />
+<br />
+<input type ="button" value = "Calulate  Year Tax" onClick="doYTax()"/>
+<br />
+<br />
+
+</fieldset>
+</form>
+</body>
+</html>
