@@ -10,6 +10,10 @@ function doMTax(){
 	var tho1a = 33600;
 	var tho2 = gross * 0.67;
 	
+	if (isNaN(gross)){
+		alert("incorrect value entered for gross");
+	}
+	else
 	if (gross <= 60000){
 	  tax = 0;
 	}
