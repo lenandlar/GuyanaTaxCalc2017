@@ -12,8 +12,8 @@ function doMTax(){
 	
 	if ((isNaN(gross)) || (gross < 0)){
 		alert("incorrect value entered for Gross Income");
+		document.tCalc.f1.value = "";
 		document.getElementById("f1").focus();
-		document.tCalc.tax1.value = 0;
 	}
 	else
 	if (gross <= 60000){
@@ -43,6 +43,12 @@ function doYTax(){
 	var tho1a = 33600;
 	var tho2 = gross * 0.6667;
 	
+	if ((isNaN(gross)) || (gross < 0)){
+		alert("incorrect value entered for Gross Income");
+		document.tCalc1.f1_1.value = "";
+		document.getElementById("f1_1").focus();
+	}
+	else
 	if (gross <= 720000){
 	  tax = 0;
 	}
