@@ -3,7 +3,7 @@ function doMTax(){
 
 	var gross = parseInt(document.tCalc.val1.value); // collect and convert income data to number
 	
-	var tax;
+	var tax = 0;
 	var tr1 = 0.28;
 	var tr2 = 0.40;
 	var tho1 = 60000;
@@ -36,7 +36,7 @@ function doYTax(){
 
 	var gross = parseInt(document.tCalc1.val1.value); // collect and convert income data to number
 	
-	var tax;
+	var tax = 0;
 	var tr1 = 0.28;
 	var tr2 = 0.40;
 	var tho1 = 720000;
