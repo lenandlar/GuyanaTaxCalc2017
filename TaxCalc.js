@@ -10,8 +10,8 @@ function doMTax(){
 	var tho1a = 33600;
 	var tho2 = gross * 0.67;
 	
-	if (isNaN(gross)){
-		alert("incorrect value entered for gross");
+	if ((isNaN(gross)) || (gross < 0)){
+		alert("incorrect value entered for Gross Income");
 		document.getElementById("f1").focus();
 		document.tCalc.tax1.value = 0;
 	}
