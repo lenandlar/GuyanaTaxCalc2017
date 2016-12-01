@@ -12,6 +12,7 @@ function doMTax(){
 	
 	if (isNaN(gross)){
 		alert("incorrect value entered for gross");
+		document.getElementById("f1").focus();
 	}
 	else
 	if (gross <= 60000){
