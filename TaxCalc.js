@@ -31,8 +31,23 @@ function doMTax(){
 	if (gross <= 180000){
          empNIS = gross * 0.056;
 	 selfempNIS = gross * 0.125;
-	 emptax = (gross - tho1 - empNIS) * 0.28;
-	 selfemptax = (gross - tho1 - selfempNIS) * 0.28;
+	    if ((tho1 + empNIS) >= gross)
+              {
+          	 emptax = 0;
+              }
+	     else
+		{
+		  emptax = (gross - tho1 - empNIS) * 0.28;
+		}
+	 
+             if((tho1 + selfempNIS) >= gross)
+		{
+		   selfemptax = 0;
+           	 }
+	      else 
+		{
+		   selfemptax = (gross - tho1 - selfempNIS) * 0.28;
+		}
 	}
 
 	else
