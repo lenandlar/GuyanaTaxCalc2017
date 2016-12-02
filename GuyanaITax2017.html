@@ -9,7 +9,10 @@
 
 <h1> Guyana Income Tax Calculation (2017 Onwards)</h1>
 <h2> Monthly </h2>
-
+<h3> Notes </h3>
+<ul>
+ <li> <a href="http://www.nis.org.gy/benefits_payable"> NIS Deduction Explanation </a></li>
+</ul>
 
 <form name="tCalc" id="f">
 <fieldset>
@@ -19,9 +22,27 @@
 <input type="text" name="val1" id="f1" />
 <br />
 <br />
-<label> Tax Payable/Month ($): </label>
-<input type="text" name="tax1" id="f3"/> <br />
+
+<label> Emp NIS/Month: </label>
+<input type="text" name="nis1" id="nis1" />
 <br />
+<br />
+
+<label> Self Emp NIS/Month: </label>
+<input type="text" name="nis1_1" id="nis1_1" />
+<br />
+<br />
+
+<label> Emp Tax Payable/Month ($): </label>
+<input type="text" name="tax1" id="f3"/> 
+<br />
+<br />
+
+<label> Self Emp Tax Payable/Month ($): </label>
+<input type="text" name="tax1_1" id="f3_1"/> 
+<br />
+<br />
+
 <input type ="button" value = "Calulate Month Tax" onClick="doMTax()"/>
 <br />
 <br />
@@ -38,11 +59,28 @@
 <label> Gross Income/Year ($): </label>
 <input type="text" name="val1" id="f1_1" />
 <br /> 
+<br />
 
+<label> NIS/Year: </label>
+<input type="text" name="nis2" id="nis2" />
 <br />
-<label> Tax Payable/Year ($): </label>
-<input type="text" name="tax1" id="f3"/> <br />
 <br />
+
+<label> Self Emp NIS/Month: </label>
+<input type="text" name="nis2_1" id="nis2_1" />
+<br />
+<br />
+
+<label> Emp Tax Payable/Year ($): </label>
+<input type="text" name="tax1" id="f3"/> 
+<br />
+<br />
+
+<label> Self Emp Tax Payable/Month ($): </label>
+<input type="text" name="tax1_1" id="f3_1"/> 
+<br />
+<br />
+
 <input type ="button" value = "Calulate  Year Tax" onClick="doYTax()"/>
 <br />
 <br />
