@@ -1,4 +1,3 @@
-
 function doMTax(){
 
 	var gross = parseInt(document.tCalc.val1.value); // collect and convert income data to number
@@ -65,11 +64,10 @@ function doMTax(){
 	 selfemptax = ((tho2 - 120000 - selfempNIS)*0.4) + tho1a;
 	}
 
-	document.tCalc.tax1.value = emptax; // display emp tax 
-	document.tCalc.tax1_1.value = selfemptax; //display self emp tax
-	document.tCalc.nis1.value = empNIS; // display emp NIS 
-	document.tCalc.nis1_1.value = selfempNIS; // display self emp 
-
+document.getElementById("empNIS").innerHTML = "Emp NIS/Month: " + "<b>" + empNIS + "</b>";
+document.getElementById("selfEmpNIS").innerHTML = "Self Emp NIS/Month: " + "<b>" + selfempNIS + "</b>";
+document.getElementById("tax1").innerHTML = "Emp Tax Payable/Month: " + "<b>" + emptax + "</b>";
+document.getElementById("tax1_1").innerHTML = "Self Emp Tax Payable/Month: " + "<b>" + selfemptax + "</b>";	
 }
 
 function doYTax(){
@@ -138,10 +136,9 @@ function doYTax(){
 	 selfemptax = ((tho2 - (120000 * 12) - selfempNIS)*0.4) + (tho1a * 12);
 	}
 
-	document.tCalc1.tax1.value = emptax; // display emp tax
-	document.tCalc1.tax1_1.value = selfemptax; //display self emp tax
-	document.tCalc1.nis2.value = empNIS; // display emp NIS 
-	document.tCalc1.nis2_1.value = selfempNIS; // display self emp 
 
+document.getElementById("empNISYear").innerHTML = "Emp NIS/Year: " + "<b>" + empNIS + "</b>";
+document.getElementById("selfEmpNISYear").innerHTML = "Self Emp NIS/Year: " + "<b>" + selfempNIS + "</b>";
+document.getElementById("tax1Year").innerHTML = "Emp Tax Payable/Year: " + "<b>" + emptax + "</b>";
+document.getElementById("tax1_1Year").innerHTML = "Self Emp Tax Payable/Year: " + "<b>" + selfemptax + "</b>";
 }
-
