@@ -51,7 +51,7 @@ function doMTax(){
 	}
 
 	else
-	if (gross <= 200000){
+	if (gross <= 220000){
 	 empNIS = gross * 0.056;
 	 selfempNIS = gross * 0.125;
 	 emptax = ((tho2 - 120000 - empNIS)*0.4) + tho1a;
@@ -59,8 +59,8 @@ function doMTax(){
 	}
 
 	else {
-	 empNIS = 200000 * 0.056;
-	 selfempNIS = 200000 * 0.125;
+	 empNIS = 220000 * 0.056;
+	 selfempNIS = 220000 * 0.125;
 	 emptax = ((tho2 - 120000 - empNIS)*0.4) + tho1a;
 	 selfemptax = ((tho2 - 120000 - selfempNIS)*0.4) + tho1a;
 	}
@@ -132,8 +132,8 @@ function doYTax(){
 	}
 
 	else {
-         empNIS = 2400000 * 0.056;
-	 selfempNIS = 2400000 * 0.125;
+         empNIS = 2640000 * 0.056;
+	 selfempNIS = 2640000 * 0.125;
          emptax = ((tho2 - (120000 * 12) - empNIS)*0.4) + (tho1a * 12);
 	 selfemptax = ((tho2 - (120000 * 12) - selfempNIS)*0.4) + (tho1a * 12);
 	}
