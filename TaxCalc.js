@@ -124,7 +124,7 @@ function doYTax(){
 	}
 
 	else
-	if (gross <= 2400000){
+	if (gross <= 2640000){
 	 empNIS = gross * 0.056;
 	 selfempNIS = gross * 0.125;
 	 emptax = ((tho2 - (120000 * 12) - empNIS)*0.4) + (tho1a * 12);
