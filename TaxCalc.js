@@ -11,6 +11,11 @@ function doMTax(){
 	var tho2 = gross * 0.6667;
 	var empNIS = 0;
 	var selfempNIS = 0;
+
+	var taxable = 0; //emp tax
+	var nTaxable = 0; // emp non-taxable
+	var taxable1 = 0;  //self emp tax
+	var nTaxable = 0; //self emp non-taxable
 	
 	if ((isNaN(gross)) || (gross < 0)){
 		alert("incorrect value entered for Gross Income");
@@ -52,20 +57,60 @@ function doMTax(){
 	else
 	if (gross <= 220000){
 	 empNIS = gross * 0.056;
-	 selfempNIS = gross * 0.125;
-	 emptax = ((tho2 - 120000 - empNIS)*0.4) + tho1a;
-	 selfemptax = ((tho2 - 120000 - selfempNIS)*0.4) + tho1a;
-	}
+ 	 selfempNIS = gross * 0.125;
 
+	nTaxable = empNIS + (gross * 1/3);
+	Taxable = gross - nTaxable;
+	
+        nTaxable1 = selfempNIS + (gross * 1/3);
+	Taxable1 = gross - nTaxable1;
+
+	   if (Taxable <= 120000){
+		emptax = Taxable * 0.28;
+		
+	    }
+            else{
+		emptax  = ((Taxable - 120000)*0.40) + 120000 * 0.28;
+	    }
+            if (Taxable1 <= 120000){
+	  	selfemptax = Taxable1 * 0.28;
+	    }
+
+             else{
+		selfemptax  = ((Taxable1 - 120000)*0.40) + 120000 * 0.28;
+	    }
+	 }
+	
 	else {
-	 empNIS = 220000 * 0.056;
-	 selfempNIS = 220000 * 0.125;
-	 emptax = ((tho2 - 120000 - empNIS)*0.4) + tho1a;
-	 selfemptax = ((tho2 - 120000 - selfempNIS)*0.4) + tho1a;
+ 	 empNIS = 220000 * 0.056;
+ 	 selfempNIS = 220000 * 0.125;
+   
+	 nTaxable = empNIS + (gross * 1/3);
+	 Taxable = gross - nTaxable;
+	
+         nTaxable1 = selfempNIS + (gross * 1/3);
+	 Taxable1 = gross - nTaxable1;
+
+	   if (Taxable <= 120000){
+		emptax = Taxable * 0.28;
+		
+	    }
+            else{
+		emptax  = ((Taxable - 120000)*0.40) + 120000 * 0.28;
+	    }
+            if (Taxable1 <= 120000){
+	  	selfemptax = Taxable1 * 0.28;
+	    }
+
+             else{
+		selfemptax  = ((Taxable1 - 120000)*0.40) + 120000 * 0.28;
+	    }
 	}
 
 document.getElementById("empNIS").innerHTML = "Emp NIS/Month: " + "<b>" + empNIS + "</b>";
+
 document.getElementById("selfEmpNIS").innerHTML = "Self Emp NIS/Month: " + "<b>" + selfempNIS + "</b>";
+
 document.getElementById("tax1").innerHTML = "Emp Tax Payable/Month: " + "<b>" + emptax + "</b>";
 document.getElementById("tax1_1").innerHTML = "Self Emp Tax Payable/Month: " + "<b>" + selfemptax + "</b>";	
 }
